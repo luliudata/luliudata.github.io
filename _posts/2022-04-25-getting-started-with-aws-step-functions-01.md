@@ -5,6 +5,9 @@ author: Lu
 category: AWS
 ---
 
+![jason-dent-eEhBS1PunXk-unsplash](https://user-images.githubusercontent.com/44141273/166163631-3e265702-4258-4eb8-8e15-b9b616d925ed.jpg)
+Photo by [Jason Dent](https://unsplash.com/es/@jdent?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/step?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
 ### What is Step Functions?
 
 [AWS Step Functions](https://aws.amazon.com/step-functions/) 
