@@ -13,7 +13,7 @@ AWS Lambda functions and other AWS services to build applications.
 
 ### Why Step Functions?
 
-Before we dive in, first， we might want to understand why we need a 'serverless orchestration service'. 
+Before we dive in, first, we might want to understand why we need a 'serverless orchestration service'. 
 If we look at the modern applications we build nowadays, most likely, we can see them consisting of microservices. 
 The advantage of the microservices is that each microservice can be built, 
 deployed and maintained individually, which increases the scalability and fault-tolerance of the whole application. 
