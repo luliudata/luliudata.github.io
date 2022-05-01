@@ -13,19 +13,19 @@ AWS Lambda functions and other AWS services to build applications.
 
 ### Why Step Functions?
 
-Before we dive in, first we might want to understand why we need 'serverless orchestration service'. 
-If we look at the modern applications we build nowadays, most likely we can see them consisting of microservices, 
-the advantage of the microservices is that each microservice can be built, 
+Before we dive in, first， we might want to understand why we need a 'serverless orchestration service'. 
+If we look at the modern applications we build nowadays, most likely, we can see them consisting of microservices. 
+The advantage of the microservices is that each microservice can be built, 
 deployed and maintained individually, which increases the scalability and fault-tolerance of the whole application. 
-What's more, in an application, each microservice needs talk to each other, 
-this is where the step functions becomes very handy and useful to link different 
+What's more, in an application, each microservice needs to talk to each other. 
+This is where the step functions become very handy and useful to link different 
 components together as a serverless orchestration service. 
-With step functions, it is easier to manage each component in the workflow, 
-and we can also visualise the workfolw in the AWS console or on our local machine (e.g.: VScode + AWS Toolkit extension). 
-Step Functions also has error handling, retry & catch machenism, it is also integrated with CloudWatch and X-Ray for us to 
+It is easier to manage each component with Step Functions in the workflow, 
+and we can also visualise the workflow in the AWS console or on our local machine (e.g., VSCode + AWS Toolkit extension). 
+Step Functions also has error handling, retry & catch mechanism, it is also integrated with CloudWatch and X-Ray for us to 
 be able to monitor its performance and help us debug.
 
-In this blog, I'll assume you already have some basic understanding of the below AWS services such as Lambda and Glue.)
+In this blog, I'll assume you already have some basic understanding of the below AWS services such as Lambda and Glue.
 The most common use cases for Step Functions are probably the integration with Lambda functions. 
 Step Functions also supports the integration with AWS Glue and SageMaker. For example,
 it can start a Glue job run or a SageMaker Batch Transform job. It can also run an Amazon ECS (Elastic Container Service) task, etc.
@@ -43,8 +43,8 @@ Below is a simple Step Function state machine:
 
 It simply invokes a Lambda function and then starts a Glue job run.
 
-There are a couple of different approaches to construct the state machines, 
-below are two ways that I normally use:
+There are a couple of different approaches to constructing the state machines. 
+Below are two ways that I normally use:
 
 * In AWS Step Functions console -> click right top 'Create State Machine' ->
 select 'Design your workflow visually'
@@ -61,13 +61,13 @@ with the help of Visual Studio Code + [AWS Toolkit extension](https://docs.aws.a
 (Code example reference: [Error handling in Step Functions
 ](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-error-handling.html#error-handling-examples))
 
-The state machine definitions uses the Amazon States Language which is a JSON-based, 
+The state machine definitions use the Amazon States Language which is a JSON-based, 
 structured language (see the left side of the image above).
 
-In the state machine definition, it uses a concept called 'States' which is basically the elements / steps
+The state machine definition uses a concept called 'States', which is basically the elementS/steps
 that we use to define the actions in state machines. 
 According to Step Function developer guide: "Individual states can make decisions based on their input, perform actions, and pass output to other states."
-This will be covered in the follow-up blog 'Getting started with AWS Step Functions 02', I'll go through some of the commonly-used
+This will be covered in the follow-up blog 'Getting started with AWS Step Functions 02'. I'll go through some of the commonly-used
 states and explain the usages based on our example state machine we used in this blog.
 
 
