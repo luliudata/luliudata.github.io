@@ -67,7 +67,7 @@ with the help of Visual Studio Code + [AWS Toolkit extension](https://docs.aws.a
 The state machine definitions use the Amazon States Language which is a JSON-based, 
 structured language (see the left side of the image above).
 
-The state machine definition uses a concept called 'States', which is basically the elementS/steps
+The state machine definition uses a concept called 'States', which is basically the elements/steps
 that we use to define the actions in state machines. 
 According to Step Function developer guide: "Individual states can make decisions based on their input, perform actions, and pass output to other states."
 This will be covered in the follow-up blog 'Getting started with AWS Step Functions 02'. I'll go through some of the commonly-used
