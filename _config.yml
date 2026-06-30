@@ -1,6 +1,7 @@
 title: "Lu Liu"
 author: "Lu Liu"
-description: "Lu Liu"
+description: "Lu Liu — Data & MLOps Engineer. Notes on MLOps, AWS, AI agents and side projects."
+url: "https://luliudata.github.io"
 permalink: /:title/
 lang: "en"
 excerpt_separator: "\n\n\n"

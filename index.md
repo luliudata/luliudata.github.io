@@ -1,27 +1,37 @@
 ---
-title: ""
+title: "Home"
 layout: page
+lang: en
 ---
 
+<p align="center">
+    <img src="images/profile_photo.png" width="200" height="200" alt="Lu Liu"/>
+</p>
 
-  <p align="center">
-      <img src= "images/profile_photo.png" width="200" height="200" align="middle"/>
-  </p>
+Hi, I'm Lu. I'm a **Data & MLOps Engineer** building the platforms and
+pipelines that ship machine learning models into production — mostly on
+AWS (SageMaker, Step Functions, Glue, CodeBuild/CodePipeline) with
+Terraform, Python and Spark. I care a lot about making the ML lifecycle
+reproducible, observable, and *boring-in-a-good-way* for the modellers I
+work with.
 
+Before this role I was a Senior Software Engineer in the financial-services
+and data-analytics space, where I built internal data-science platforms on
+AWS and productionised NLP and analyst-revision models from prototype to
+live. I'm **AWS Certified Machine Learning – Specialty**, active in the AWS
+technical community, and recently picked up an agent-skills certificate
+while exploring agentic systems.
 
-Hi, I'm Lu. I'm a software engineer with data science background. I'm passionate about MLOps and cloud platform (mainly AWS).
-I am an AWS certified developer and an [AWS community builder](https://aws.amazon.com/developer/community/community-builders/).
+Outside the day job I teach beginners how to code, mentor early-career
+women in tech, and occasionally give talks at tech meetups. I'm also
+building **[TripTracker Notes](/projects/#triptracker-notes)**, a bilingual
+privacy-first iOS travel app with AI-generated itineraries.
 
-I enjoy both modelling and engineering side of the data science work. I mostly work on building cloud infrastructures
-and data pipelines, deploying Machine Learning models to the cloud.
+Blog posts here are mostly learning notes — MLOps, AWS, AI agents, and the
+occasional side-project write-up. Feel free to get in touch — comments,
+corrections, and suggestions always welcome.
 
-My blogs are mostly my learning notes (haven't added any yet), I'm not expecting they're helpful to anyone else...
-But if you have read them, feel free to get in touch, comments, corrections or suggestions are always welcome!
+## A bit more about me
 
-I also support #WomenInTech.
-
-## A bit more about me?
-
-- I was featured on the University of Leeds's School of Mathematics [alumni profile](https://eps.leeds.ac.uk/maths/dir-record/student-alumni-profiles/4378/lu-liu?searchDirCategoryID=10007).
-
-- I occasionally do regional talks - checkout my talk at amazing tech community [Hey! Leeds](https://heyst.ac/talks/getting-into-technology-it-s-never-too-late).
+- I was featured on my university's School of Mathematics
+  [alumni profile](https://eps.leeds.ac.uk/maths/dir-record/student-alumni-profiles/4378/lu-liu?searchDirCategoryID=10007).

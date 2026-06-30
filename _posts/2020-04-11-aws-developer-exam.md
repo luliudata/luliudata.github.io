@@ -3,6 +3,7 @@ title:  "How I passed my AWS Certified Developer Associate exam"
 mathjax: true
 author: Lu
 category: AWS
+lang: en
 ---
 
 
