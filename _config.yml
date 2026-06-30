@@ -18,10 +18,12 @@ minimal: true             # use a dark header
 # Menu
 
 navigation_en:             # English header — accepts {file, title, url, icon}
-  - {file: "blog.md", title: "Blog"}
+  - {file: "blog.md",     title: "Blog"}
+  - {file: "projects.md", title: "Projects"}
 
 navigation_zh:             # Chinese header
-  - {url: "/zh/blog/", title: "博客"}
+  - {url: "/zh/blog/",     title: "博客"}
+  - {url: "/zh/projects/", title: "项目"}
 
 external:                  # footer social links — icons: fontawesome.com/icons
   - {title: Mail,     icon: envelope, url: "mailto:luliudata@gmail.com"}
