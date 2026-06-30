@@ -1,0 +1,27 @@
+{%- comment -%}
+Renders a tiny "EN | 中" pill that links between the page's language
+versions. From an English URL we just prepend /zh; from a Chinese URL
+we strip the leading /zh. Pages that don't have a translated sibling
+will land on the site's 404 — acceptable for now since the language
+switch on a post implies a translation exists.
+{%- endcomment -%}
+
+{%- assign current_lang = page.lang | default: site.lang | default: "en" -%}
+{%- if current_lang == "zh" -%}
+  {%- assign other_lang = "en" -%}
+  {%- assign other_url = page.url | remove_first: "/zh" -%}
+  {%- if other_url == "" -%}{%- assign other_url = "/" -%}{%- endif -%}
+{%- else -%}
+  {%- assign other_lang = "zh" -%}
+  {%- if page.url == "/" -%}
+    {%- assign other_url = "/zh/" -%}
+  {%- else -%}
+    {%- assign other_url = "/zh" | append: page.url -%}
+  {%- endif -%}
+{%- endif -%}
+
+<nav class="lang-switch" aria-label="Language">
+  <a class="current" aria-current="page">{{ site.data.i18n[current_lang].lang_short }}</a>
+  <span class="sep" aria-hidden="true">|</span>
+  <a href="{{ other_url | relative_url }}" hreflang="{{ other_lang }}" title="{{ site.data.i18n[current_lang].switch_to_url }}">{{ site.data.i18n[current_lang].switch_to }}</a>
+</nav>
