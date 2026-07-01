@@ -11,8 +11,10 @@ date_format: "%B %d, %Y"
 defaults:
   - scope: {path: "", type: posts}
     values: {layout: post}
-  - scope: {path: "", type: pages}
-    values: {layout: page}
+  # Note: no default layout for 'pages' — that would also match generated
+  # files like assets/fontawesome/icons.svg (which has empty front-matter
+  # to trigger Liquid) and wrap them in a page layout, breaking the SVG
+  # sprite. Every content page declares its own layout explicitly.
 
 # Layout
 
