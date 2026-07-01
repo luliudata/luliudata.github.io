@@ -8,6 +8,12 @@ lang: "en"
 excerpt_separator: "\n\n\n"
 date_format: "%B %d, %Y"
 
+defaults:
+  - scope: {path: "", type: posts}
+    values: {layout: post}
+  - scope: {path: "", type: pages}
+    values: {layout: page}
+
 # Layout
 
 show_excerpts: false        # show article excerpts on the home page
