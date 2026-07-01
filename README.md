@@ -1,99 +1,31 @@
----
-title: "About"
-permalink: "/about/"
-layout: page
----
+# luliudata.github.io
 
-## Installation
+Source for [luliudata.github.io](https://luliudata.github.io) — Lu Liu's
+personal site and blog.
 
-Just fork this [repository](https://github.com/niklasbuschmann/contrast) and adjust the `_config.yml` to use with [Github Pages](https://pages.github.com/) and your page is done.
+Built with [Jekyll](https://jekyllrb.com/) on the
+[contrast](https://github.com/niklasbuschmann/contrast) theme by
+Niklas Buschmann, with a custom palette, light/dark toggle, and
+English / 中文 bilingual content.
 
-## Features
+## Local development
 
- - supports dark mode on macOS Mojave
- - optional sidebar
- - MathJax support
- - no external ressources
- - included archive page
- - supports pagination
- - feed generation
- - responsive
- - syntax highlighting
- - supports comments via [disqus](https://disqus.com/) or [isso](http://posativ.org/isso/)
-
-## Based on
-
-- [Hyde](https://github.com/poole/hyde)
-- [Minima](https://github.com/jekyll/minima)
-- [Lagrange](https://github.com/LeNPaul/Lagrange)
-- [Font Awesome](http://fontawesome.io/)
-- [KaTeX](https://katex.org/)
-- [Pygments](https://github.com/richleland/pygments-css)
-
-## Installation (jekyll-remote-theme method)
-
-You can use this theme with the `jekyll-remote-theme` plugin. Just create an empty repo, copy over the `index.html` file and add this to your `_config.yml`:
-
-```yaml
-remote_theme: niklasbuschmann/contrast@v2.11
-
-plugins:
-  - jekyll-remote-theme
+```bash
+bundle install
+bundle exec jekyll serve --livereload
 ```
 
-Note: to enable icons you also need to copy over the `_data` folder.
+Then open http://localhost:4000.
 
-## Config
+## Content
 
-Your `_config.yml` could for example look like this:
-
-```yaml
-title: "Blog Title"
-author: "Blog Author"
-description: "My personal blog about ... something"
-permalink: /:title/
-lang: "en"
-excerpt_separator: "\n\n\n"
-date_format: "%B %d, %Y"
-
-# Layout
-
-show_excerpts: true        # show article excerpts on the home page
-show_frame: true           # adds a gray frame to the site
-show_sidebar: false        # show a sidebar instead of the usual header
-
-# Menu
-
-navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {file: "index.html"}
-  - {file: "README.md"}
-
-external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
-  - {title: Mail, icon: envelope, url: "mailto:niklasbuschmann@users.noreply.github.com"}
-  - {title: Github, icon: github, url: "https://github.com/niklasbuschmann/contrast"}
-  - {title: Subscribe, icon: rss, url: "/feed.xml"}
-
-comments:
-#  disqus_shortname: ""    # see https://disqus.com/
-#  isso_domain: ""         # see https://posativ.org/isso/
-
-plugins:
- - jekyll-feed
-
-```
-
-## MathJax
-
-Contrast comes preinstalled with a leightweight alternative to MathJax called [KaTeX](https://katex.org/). To display equations in a post simply set `mathjax: true` in the article's front matter.
+- Posts live in `_posts/` (English) and `_posts/zh/` (中文).
+- Static pages: `index.md`, `blog.md`, `projects.md`, with `/zh/` mirrors
+  for the Chinese versions.
+- Site config: `_config.yml`. UI strings used by templates live in
+  `_data/i18n.yml`.
 
 ## License
 
-[public domain](http://unlicense.org/)
-
-## Screenshots
-
-![screenshot](https://user-images.githubusercontent.com/4943215/109431850-cd711780-7a08-11eb-8601-2763f2ee6bb4.png)
-
-![screenshot](https://user-images.githubusercontent.com/4943215/109431832-b6cac080-7a08-11eb-9c5e-a058680c23a1.png)
-
-![screenshot](https://user-images.githubusercontent.com/4943215/73125194-5f0b8b80-3fa4-11ea-805c-8387187503ad.png)
+Site content © Lu Liu. The underlying theme is released under the
+[Unlicense](UNLICENSE.txt) by its original author.

@@ -1,10 +1,18 @@
 title: "Lu Liu"
 author: "Lu Liu"
-description: "Lu Liu"
+description: "Lu Liu — Data & MLOps Engineer. Notes on MLOps, AWS, AI agents and side projects."
+description_zh: "刘璐 —— 数据与 MLOps 工程师。记录关于 MLOps、AWS、AI agents 和个人项目的学习笔记。"
+url: "https://luliudata.github.io"
 permalink: /:title/
 lang: "en"
 excerpt_separator: "\n\n\n"
 date_format: "%B %d, %Y"
+
+defaults:
+  - scope: {path: "", type: posts}
+    values: {layout: post}
+  - scope: {path: "", type: pages}
+    values: {layout: page}
 
 # Layout
 
@@ -15,15 +23,19 @@ minimal: true             # use a dark header
 
 # Menu
 
-navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {file: "blog.md", title: "Blog"}
-#  - {file: "work.md", title: "My Work"}
+navigation_en:             # English header — accepts {file, title, url, icon}
+  - {file: "blog.md",     title: "Blog"}
+  - {file: "projects.md", title: "Projects"}
 
-external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
-  - {title: Mail, icon: envelope, url: "mailto:luliudata@gmail.com"}
-  - {title: Github, icon: github, url: "https://github.com/luliudata/"}
-  - { title: Twitter, icon: twitter, url: "https://twitter.com/luuuuliu" }
-  - { title: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/in/lu-liu/" }
+navigation_zh:             # Chinese header
+  - {url: "/zh/blog/",     title: "博客"}
+  - {url: "/zh/projects/", title: "项目"}
+
+external:                  # footer social links — icons: fontawesome.com/icons
+  - {title: Mail,     icon: envelope, url: "mailto:luliudata@gmail.com"}
+  - {title: Github,   icon: github,   url: "https://github.com/luliudata/"}
+  - {title: Twitter,  icon: twitter,  url: "https://twitter.com/luuuuliu"}
+  - {title: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/in/lu-liu/"}
 #  - {title: Subscribe, icon: rss, url: "/feed.xml"}
 
 comments:

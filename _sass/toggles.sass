@@ -1,0 +1,62 @@
+// Header controls: theme toggle and language switch.
+// Keep these styles light — they have to sit cleanly inside the dark
+// header bar in both light- and dark-mode.
+
+// Header controls: single-tap toggles for language and theme.
+// Both render as one glyph representing the "other" state — mirroring
+// the way the light/dark button hints at what clicking will do.
+
+.header-controls
+  display: inline-flex
+  align-items: center
+  gap: .9em
+  margin-left: .9em
+
+.theme-toggle, .lang-switch
+  background: transparent
+  border: 0
+  padding: 0
+  color: inherit
+  font: inherit
+  cursor: pointer
+  line-height: 1
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  text-decoration: none
+  opacity: .85
+  &:hover, &:focus-visible
+    opacity: 1
+    text-decoration: none
+  &:focus-visible
+    outline: 2px solid $link-color
+    outline-offset: 3px
+    border-radius: 2px
+
+.theme-toggle .icon
+  width: 1.1em
+  height: 1.1em
+  fill: currentColor
+
+.lang-switch
+  min-width: 1.4em
+  font-weight: 500
+  font-size: .95em
+
+// Show the moon when the resolved theme is light, sun when it's dark.
+[data-theme-icon="sun"], [data-theme-icon="moon"]
+  display: none
+
+html:not([data-theme]) [data-theme-icon="moon"]
+  display: inline
+
+@media (prefers-color-scheme: dark)
+  html:not([data-theme]) [data-theme-icon="moon"]
+    display: none
+  html:not([data-theme]) [data-theme-icon="sun"]
+    display: inline
+
+html[data-theme="light"] [data-theme-icon="moon"]
+  display: inline
+html[data-theme="dark"] [data-theme-icon="sun"]
+  display: inline

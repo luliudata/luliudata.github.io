@@ -10,11 +10,16 @@ body
   -webkit-text-size-adjust: 100%
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
+  transition: background-color .18s ease, color .18s ease
 
 @media (prefers-color-scheme: dark)
-  body
+  html:not([data-theme="light"]) body
     background: $dark
     color: $light
+
+html[data-theme="dark"] body
+  background: $dark
+  color: $light
 
 h1, h2, h3, h4, h5, h6
   font-weight: $heading-weight
