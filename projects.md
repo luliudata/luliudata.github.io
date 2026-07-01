@@ -1,7 +1,6 @@
 ---
 title: "Projects"
 layout: default
-lang: en
 ---
 
 <article markdown="1">

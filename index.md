@@ -1,7 +1,6 @@
 ---
 title: "Home"
 layout: page
-lang: en
 ---
 
 <p align="center">

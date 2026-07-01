@@ -29,17 +29,16 @@ body > footer nav a .icon
   fill: currentColor
   vertical-align: -.25em
 
-// Header controls: single-tap toggles for language and theme.
-// Both render as one glyph representing the "other" state — mirroring
-// the way the light/dark button hints at what clicking will do.
+// Header control: light/dark toggle button. Renders one glyph
+// representing the "other" state — click the moon to go dark, click
+// the sun to go light.
 
 .header-controls
   display: inline-flex
   align-items: center
-  gap: .9em
   margin-left: .9em
 
-.theme-toggle, .lang-switch
+.theme-toggle
   background: transparent
   border: 0
   padding: 0
@@ -50,11 +49,9 @@ body > footer nav a .icon
   display: inline-flex
   align-items: center
   justify-content: center
-  text-decoration: none
   opacity: .85
   &:hover, &:focus-visible
     opacity: 1
-    text-decoration: none
   &:focus-visible
     outline: 2px solid $link-color
     outline-offset: 3px
@@ -64,11 +61,6 @@ body > footer nav a .icon
   width: 1.1em
   height: 1.1em
   fill: currentColor
-
-.lang-switch
-  min-width: 1.4em
-  font-weight: 500
-  font-size: .95em
 
 // Show the moon when the resolved theme is light, sun when it's dark.
 [data-theme-icon="sun"], [data-theme-icon="moon"]

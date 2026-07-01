@@ -3,7 +3,6 @@ title:  "Getting started with AWS Step Functions 01"
 mathjax: true
 author: Lu
 category: AWS
-lang: en
 ---
 
 ![jason-dent-eEhBS1PunXk-unsplash](https://user-images.githubusercontent.com/44141273/166163631-3e265702-4258-4eb8-8e15-b9b616d925ed.jpg)
