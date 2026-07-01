@@ -34,10 +34,10 @@ navigation_zh:             # Chinese header
   - {url: "/zh/projects/", title: "项目"}
 
 external:                  # footer social links — icons: fontawesome.com/icons
-  - {title: Mail,     icon: envelope, url: "mailto:luliudata@gmail.com"}
-  - {title: Github,   icon: github,   url: "https://github.com/luliudata/"}
-  - {title: Twitter,  icon: twitter,  url: "https://twitter.com/luuuuliu"}
   - {title: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/in/lu-liu/"}
+  - {title: X,        icon: twitter,  url: "https://twitter.com/luuuuliu"}
+  - {title: Github,   icon: github,   url: "https://github.com/luliudata/"}
+  - {title: Mail,     icon: envelope, url: "mailto:luliudata@gmail.com"}
 #  - {title: Subscribe, icon: rss, url: "/feed.xml"}
 
 comments:

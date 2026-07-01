@@ -2,6 +2,33 @@
 // Keep these styles light — they have to sit cleanly inside the dark
 // header bar in both light- and dark-mode.
 
+// Slim, muted footer: copyright on the left, social icons on the right.
+// No dark bar — the footer inherits the body background so it blends
+// cleanly in both light and dark mode.
+body > footer
+  color: reduce(70)
+  border-top: 1px solid reduce(10)
+  font-size: .85em
+  padding: 1em 1.5em
+
+body > footer .copyright
+  margin: 0
+
+body > footer nav
+  margin: 0
+
+body > footer nav a
+  margin: 0 0 0 1.25em
+  opacity: .65
+  &:hover, &:focus-visible
+    opacity: 1
+
+body > footer nav a .icon
+  width: 1.15rem
+  height: 1.15rem
+  fill: currentColor
+  vertical-align: -.25em
+
 // Header controls: single-tap toggles for language and theme.
 // Both render as one glyph representing the "other" state — mirroring
 // the way the light/dark button hints at what clicking will do.

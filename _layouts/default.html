@@ -79,12 +79,10 @@
 
 {{ content }}
 
-{% if site.external %}
 <footer>
-  <div>{{ site_desc | default: site.title }}</div>
-  {% include menu.html menu=site.external %}
+  <div class="copyright">&copy; {{ site.time | date: "%Y" }} {{ site.author | default: site.title | escape }}</div>
+  {% if site.external %}{% include menu.html menu=site.external %}{% endif %}
 </footer>
-{% endif %}
 
 <script>
   (function () {
