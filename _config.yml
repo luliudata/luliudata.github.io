@@ -25,9 +25,9 @@ minimal: true             # use a dark header
 
 # Menu
 
-navigation_en:             # English header — accepts {file, title, url, icon}
-  - {file: "blog.md",     title: "Blog"}
-  - {file: "projects.md", title: "Projects"}
+navigation_en:             # English header
+  - {url: "/blog/",     title: "Blog"}
+  - {url: "/projects/", title: "Projects"}
 
 navigation_zh:             # Chinese header
   - {url: "/zh/blog/",     title: "博客"}
