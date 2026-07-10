@@ -40,5 +40,5 @@ corrections, and suggestions always welcome.
 - I was featured on my university's School of Mathematics
   [alumni profile](https://eps.leeds.ac.uk/maths/dir-record/student-alumni-profiles/4378/lu-liu?searchDirCategoryID=10007).
 - I occasionally give talks at tech meetups — here's
-  [one at Hey! Leeds](https://heyst.ac/talks/getting-into-technology-it-s-never-too-late)
+  [one at Hey! Leeds](https://heypresents.com/talks/getting-into-technology-it-s-never-too-late)
   on getting into tech.
