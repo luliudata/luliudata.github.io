@@ -7,9 +7,16 @@ lang: "en"
 excerpt_separator: "\n\n\n"
 date_format: "%B %d, %Y"
 
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
 defaults:
   - scope: {path: "", type: posts}
     values: {layout: post}
+  - scope: {path: "", type: projects}
+    values: {layout: page}
   # Note: no default layout for 'pages' — that would also match generated
   # files like assets/fontawesome/icons.svg (which has empty front-matter
   # to trigger Liquid) and wrap them in a page layout, breaking the SVG
