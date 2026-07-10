@@ -5,8 +5,7 @@ personal site and blog.
 
 Built with [Jekyll](https://jekyllrb.com/) on the
 [contrast](https://github.com/niklasbuschmann/contrast) theme by
-Niklas Buschmann, with a custom palette, light/dark toggle, and
-English / 中文 bilingual content.
+Niklas Buschmann, with a custom palette and light/dark toggle.
 
 ## Local development
 
@@ -19,11 +18,9 @@ Then open http://localhost:4000.
 
 ## Content
 
-- Posts live in `_posts/` (English) and `_posts/zh/` (中文).
-- Static pages: `index.md`, `blog.md`, `projects.md`, with `/zh/` mirrors
-  for the Chinese versions.
-- Site config: `_config.yml`. UI strings used by templates live in
-  `_data/i18n.yml`.
+- Posts live in `_posts/`.
+- Static pages: `index.md`, `blog.md`, `projects.md`, `archive.html`.
+- Site config: `_config.yml`.
 
 ## License
 

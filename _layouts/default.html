@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ site.lang | default: "en" }}">
 <script>
   // Pre-paint: honour the user's saved theme before the first paint to
   // avoid a flash of the wrong mode. No saved preference => fall through
@@ -17,26 +17,17 @@
 <meta charset="{{ site.encoding }}">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="{{ page.author | default: site.author | escape }}">
-{%- assign page_lang = page.lang | default: site.lang | default: "en" -%}
-{%- if page_lang == "zh" -%}
-  {%- assign site_desc = site.description_zh | default: site.description -%}
-{%- else -%}
-  {%- assign site_desc = site.description -%}
-{%- endif -%}
-<meta name="description" content="{{ page.description | default: site_desc | escape }}">
+<meta name="description" content="{{ page.description | default: site.description | escape }}">
 <meta name="generator" content="Jekyll v{{ jekyll.version }}">
 <link rel="canonical" href="{{ page.url | absolute_url }}">
 <meta property="og:title" content="{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}">
-<meta property="og:description" content="{{ page.description | default: site_desc | escape }}">
+<meta property="og:description" content="{{ page.description | default: site.description | escape }}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
 <meta property="og:site_name" content="{{ site.title | escape }}">
-<meta property="og:locale" content="{% if page_lang == 'zh' %}zh_CN{% else %}en_GB{% endif %}">
+<meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@luuuuliu">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
 {% if site.show_frame %}
 <link rel="stylesheet" href="{{ "/assets/css/frame.css" | relative_url }}">
 {% else %}
@@ -52,26 +43,16 @@
 {% if site.comments.isso_domain and page.layout == "post" %}<script data-isso="http://{{ site.comments.isso_domain }}" src="//{{ site.comments.isso_domain }}/js/embed.min.js"></script>{% endif %}
 {% if site.show_sidebar or site.sidebar %}{% include sidebar.html %}{% endif %}
 
-{%- assign current_lang = page.lang | default: site.lang | default: "en" -%}
-{% if current_lang == "zh" and site.navigation_zh %}
-  {% assign pages = site.navigation_zh %}
-  {% assign home_url = "/zh/" %}
-{% elsif site.navigation_en %}
-  {% assign pages = site.navigation_en %}
-  {% assign home_url = "/" %}
-{% elsif site.navigation %}
+{% if site.navigation %}
   {% assign pages = site.navigation %}
-  {% assign home_url = "/" %}
 {% else %}
   {% assign pages = site.pages | where_exp: "item", "item.title and item.sitemap != false" | sort: "order" %}
-  {% assign home_url = "/" %}
 {% endif %}
 
 <header>
-  <a href="{{ home_url | relative_url }}" class="title">{{ site.title | escape }}</a>
+  <a href="{{ "/" | relative_url }}" class="title">{{ site.title | escape }}</a>
   {% include menu.html menu=pages %}
   <div class="header-controls">
-    {% include lang-switch.html %}
     <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle light and dark mode" title="Toggle light/dark">
       {%- comment -%} Heroicons-outline moon and sun, MIT licensed. {%- endcomment -%}
       <svg class="icon" data-theme-icon="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -82,12 +63,10 @@
 
 {{ content }}
 
-{% if site.external %}
 <footer>
-  <div>{{ site_desc | default: site.title }}</div>
-  {% include menu.html menu=site.external %}
+  <div class="copyright">&copy; {{ site.time | date: "%Y" }} {{ site.author | default: site.title | escape }}</div>
+  {% if site.external %}{% include menu.html menu=site.external %}{% endif %}
 </footer>
-{% endif %}
 
 <script>
   (function () {

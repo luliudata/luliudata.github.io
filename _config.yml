@@ -1,18 +1,26 @@
 title: "Lu Liu"
 author: "Lu Liu"
 description: "Lu Liu — Data & MLOps Engineer. Notes on MLOps, AWS, AI agents and side projects."
-description_zh: "刘璐 —— 数据与 MLOps 工程师。记录关于 MLOps、AWS、AI agents 和个人项目的学习笔记。"
 url: "https://luliudata.github.io"
 permalink: /:title/
 lang: "en"
 excerpt_separator: "\n\n\n"
 date_format: "%B %d, %Y"
 
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
 defaults:
   - scope: {path: "", type: posts}
     values: {layout: post}
-  - scope: {path: "", type: pages}
+  - scope: {path: "", type: projects}
     values: {layout: page}
+  # Note: no default layout for 'pages' — that would also match generated
+  # files like assets/fontawesome/icons.svg (which has empty front-matter
+  # to trigger Liquid) and wrap them in a page layout, breaking the SVG
+  # sprite. Every content page declares its own layout explicitly.
 
 # Layout
 
@@ -23,19 +31,15 @@ minimal: true             # use a dark header
 
 # Menu
 
-navigation_en:             # English header — accepts {file, title, url, icon}
-  - {file: "blog.md",     title: "Blog"}
-  - {file: "projects.md", title: "Projects"}
-
-navigation_zh:             # Chinese header
-  - {url: "/zh/blog/",     title: "博客"}
-  - {url: "/zh/projects/", title: "项目"}
+navigation:                # header — accepts {file, title, url, icon}
+  - {url: "/blog/",     title: "Blog"}
+  - {url: "/projects/", title: "Projects"}
 
 external:                  # footer social links — icons: fontawesome.com/icons
-  - {title: Mail,     icon: envelope, url: "mailto:luliudata@gmail.com"}
-  - {title: Github,   icon: github,   url: "https://github.com/luliudata/"}
-  - {title: Twitter,  icon: twitter,  url: "https://twitter.com/luuuuliu"}
   - {title: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/in/lu-liu/"}
+  - {title: X,        icon: twitter,  url: "https://twitter.com/luuuuliu"}
+  - {title: Github,   icon: github,   url: "https://github.com/luliudata/"}
+  - {title: Mail,     icon: envelope, url: "mailto:luliudata@gmail.com"}
 #  - {title: Subscribe, icon: rss, url: "/feed.xml"}
 
 comments:
@@ -44,3 +48,11 @@ comments:
 
 plugins:
  - jekyll-feed
+
+exclude:
+  - vendor
+  - preview
+  - README.md
+  - UNLICENSE.txt
+  - Gemfile
+  - Gemfile.lock

@@ -1,9 +1,7 @@
-{%- assign current_lang = page.lang | default: site.lang | default: "en" -%}
-{%- assign filtered_posts = site.posts | where: "lang", current_lang -%}
 <article>
-  <header><h1>{{ include.title | default: page.title | default: site.data.i18n[current_lang].archive_title }}</h1></header>
+  <header><h1>{{ include.title | default: page.title | default: "Posts" }}</h1></header>
   <ul class="archive">
-    {% for post in filtered_posts %}
+    {% for post in site.posts %}
     <li>
       <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
